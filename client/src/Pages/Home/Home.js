@@ -14,10 +14,10 @@ export default function Home() {
   const [biomeData, setBiomeData] = useState([])
   const [loading, setLoading] = useState(false)
   const fetchData = async () => {
-    await axios.get(`https://bfi-server.vercel.app/`).then((res) => setData(res.data))
+    await axios.get(`https://bfi-server-eight.vercel.app/`).then((res) => setData(res.data))
   }
   const fetchBiomeData = async () => {
-    await axios.get(`https://bfi-server.vercel.app/biome`).then((res) => setBiomeData(res.data))
+    await axios.get(`https://bfi-server-eight.vercel.app/biome`).then((res) => setBiomeData(res.data))
   }
   useEffect(() => {
     setLoading(true)

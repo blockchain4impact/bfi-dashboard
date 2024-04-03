@@ -9,7 +9,7 @@ const OrgTimeline = () => {
     const [messageApi, contextHolder] = message.useMessage();
     const [loading, setLoading] = useState(false)
     const fetchData = async () => {
-        await axios.get(`https://bfi-server.vercel.app/`).then((res) => setData(res.data))
+        await axios.get(`https://bfi-server-eight.vercel.app/`).then((res) => setData(res.data))
     }
     useEffect(() => {
         setLoading(true)
