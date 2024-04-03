@@ -5,12 +5,17 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors({
-  origin: ["https://bfi-rho.vercel.app", "http://localhost:3000", "https://dashboard.blockchainforimpact.in"],
-  methods: ['GET', 'POST', 'DELETE', 'PUT'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'scheme']
-}));
-
+app.use(
+  cors({
+    origin: [
+      "https://bfi-rho.vercel.app",
+      "http://localhost:3000",
+      "https://dashboard.blockchainforimpact.in",
+    ],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    allowedHeaders: ["Content-Type", "Authorization", "scheme"],
+  })
+);
 
 const port = process.env.REACT_APP_PORT || 5000;
 
@@ -30,10 +35,6 @@ app.get("/biome", async (req, res) => {
   res.send(data);
 });
 
-app.get("/biome", async (req, res) => {
-  const data = await BiomeSchema.find({});
-  res.send(data);
-});
 
 app.put("/biomeUpdate/:id", async (req, res) => {
   const id = req.params;
