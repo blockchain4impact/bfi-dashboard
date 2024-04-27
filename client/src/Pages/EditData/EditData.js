@@ -28,7 +28,7 @@ function EditData() {
     };
     const fetchData = async () => {
         await axios
-            .get(`https://bfi-server-eight.vercel.app/getpost/${id.state}`)
+            .get(`https://bfi-server.vercel.app/getpost/${id.state}`)
             .then((res) => setData(res.data));
 
     };
