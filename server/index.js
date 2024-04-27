@@ -8,7 +8,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://bfi-rho.vercel.app",
+      "https://bfi-dashboard.vercel.app",
       "http://localhost:3000",
       "https://dashboard.blockchainforimpact.in",
     ],
